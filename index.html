@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Pre School</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        /* Custom scrollbar for a smoother look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-purple-50 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-green-100 shadow-md py-4 px-6 md:px-12 sticky top-0 z-50 rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- <a href="#" class="text-2xl md:text-3xl font-extrabold text-indigo-700 hover:text-indigo-900 transition duration-300">
+                Trinity Pre School
+            </a> -->
+            <!-- <a href="#" class="text-2xl md:text-3xl font-extrabold text-indigo-700 hover:text-indigo-900 transition duration-300 flex items-center gap-2">
+                <img src="images/trinity-logo.jpg" alt="Logo" class="w-10 h-10 object-contain" />
+                Trinity Pre School
+              </a> -->
+            <div class="inline-block text-center">
+                <a href="#"
+                    class="flex items-center justify-center gap-3 transition duration-300 hover:text-yellow-500">
+                    <img src="images/trinity-logo.jpg" alt="Logo" class="w-14 h-14 object-contain" />
+                    <span class="text-indigo-600 uppercase font-extrabold tracking-wider text-2xl md:text-4xl"
+                        style="font-family: 'Orbitron', sans-serif;">
+                        TRINITY PRESCHOOL
+                    </span>
+                </a>
+                <p class="text-pink-400 uppercase font-semibold text-base mt-0.5 pl-6 ml-6 tracking-wide select-none">
+                    Loving hands, Learning minds
+                </p>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">About
+                    Us</a>
+                <a href="#programs"
+                    class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Programs</a>
+                <!-- <a href="#gallery" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Gallery</a> -->
+                <a href="#contact"
+                    class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed inset-0 bg-green-100 bg-opacity-95 z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <a href="#home" class="text-gray-800 hover:text-indigo-600 font-medium transition duration-300 py-2"
+                onclick="toggleMobileMenu()">Home</a>
+            <a href="#about" class="text-gray-800 hover:text-indigo-600 font-medium transition duration-300 py-2"
+                onclick="toggleMobileMenu()">About Us</a>
+            <a href="#programs" class="text-gray-800 hover:text-indigo-600 font-medium transition duration-300 py-2"
+                onclick="toggleMobileMenu()">Programs</a>
+            <!-- <a href="#gallery" class="text-gray-800 hover:text-indigo-600 font-medium transition duration-300 py-2" onclick="toggleMobileMenu()">Gallery</a> -->
+            <a href="#contact" class="text-gray-800 hover:text-indigo-600 font-medium transition duration-300 py-2"
+                onclick="toggleMobileMenu()">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Hero Section -->
+        <section id="home"
+            class="flex flex-col md:flex-row items-center justify-center bg-green-100 rounded-3xl shadow-xl p-8 md:p-16 mb-12 transform transition duration-500 hover:scale-[1.01]">
+            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0 md:pr-12">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-indigo-800 leading-tight mb-4">
+                    Where Little Stars Shine Bright!
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    Nurturing young minds with love, laughter, and learning.
+                </p>
+                <a href="#programs"
+                    class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                    Explore Our Programs
+                </a>
+            </div>
+            <div class="md:w-1/2">
+                <img src="images/trinity-banner.png" alt="Happy kids playing"
+                    class="rounded-3xl shadow-2xl w-full h-auto object-cover border-4 border-indigo-200">
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about"
+            class="bg-green-100 rounded-3xl shadow-xl p-8 md:p-16 mb-12 transform transition duration-500 hover:scale-[1.01]">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-8">About Trinity Pre School</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <img src="images/kid.png" alt="Play school classroom"
+                        class="rounded-2xl shadow-lg w-full h-auto object-cover border-2 border-orange-200">
+                </div>
+                <div class="md:w-1/2 text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        At Trinity Pre School, we believe in providing a safe, stimulating, and joyful environment where
+                        children can explore, discover, and grow. Our dedicated educators foster a love for learning
+                        through play-based activities, creative expression, and social interaction.
+                    </p>
+                    <p class="mb-4">
+                        We are committed to nurturing each child's unique potential, building confidence, and preparing
+                        them for a successful transition to formal schooling. Our curriculum is designed to encourage
+                        curiosity, critical thinking, and a strong foundation in early literacy and numeracy.
+                    </p>
+                    <p>
+                        Come join our family and watch your little one sparkle!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs"
+            class="bg-green-100 rounded-3xl shadow-xl p-8 md:p-16 mb-12 transform transition duration-500 hover:scale-[1.01]">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">Our Programs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Card 1 -->
+                <div
+                    class="bg-red-50 p-6 rounded-2xl shadow-md border border-indigo-200 hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold text-indigo-800 mb-3">Toddler Playgroup (1.5 - 2.5 years)</h3>
+                    <p class="text-gray-700 mb-4">
+                        Focuses on sensory play, motor skill development, and early social interaction in a nurturing
+                        environment.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Sensory Exploration</li>
+                        <li>Basic Motor Skills</li>
+                        <li>Socialization</li>
+                    </ul>
+                </div>
+                <!-- Program Card 2 -->
+                <div
+                    class="bg-orange-50 p-6 rounded-2xl shadow-md border border-indigo-200 hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold text-indigo-800 mb-3">Daycare (2.5 - 5 years)</h3>
+                    <p class="text-gray-700 mb-4">
+                        Provides a safe and engaging environment with activities designed to support early learning,
+                        creativity, and social growth.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Creative Activities</li>
+                        <li>Early Learning Concepts</li>
+                        <li>Group Play & Social Skills</li>
+                    </ul>
+                </div>
+                <!-- Program Card 2 -->
+                <div
+                    class="bg-green-50 p-6 rounded-2xl shadow-md border border-green-200 hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold text-green-800 mb-3">Nursery (2.5 - 3.5 years)</h3>
+                    <p class="text-gray-700 mb-4">
+                        Introduces foundational concepts through storytelling, art, music, and structured play.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Early Literacy & Numeracy</li>
+                        <li>Creative Arts</li>
+                        <li>Language Development</li>
+                    </ul>
+                </div>
+                <!-- Program Card 3 -->
+                <div
+                    class="bg-yellow-50 p-6 rounded-2xl shadow-md border border-yellow-200 hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold text-yellow-800 mb-3">Junior Kindergarten (3.5 - 4.5 years)</h3>
+                    <p class="text-gray-700 mb-4">
+                        Prepares children for kindergarten with enhanced academic readiness and problem-solving skills.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Pre-reading & Writing</li>
+                        <li>Basic Math Concepts</li>
+                        <li>Science Exploration</li>
+                    </ul>
+                </div>
+                <!-- Program Card 4 -->
+                <div
+                    class="bg-red-50 p-6 rounded-2xl shadow-md border border-red-200 hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold text-red-800 mb-3">Senior Kindergarten (4.5 - 5.5 years)</h3>
+                    <p class="text-gray-700 mb-4">
+                        Advanced curriculum focusing on school readiness, critical thinking, and independent learning.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Advanced Literacy</li>
+                        <li>Problem Solving</li>
+                        <li>Social-Emotional Development</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <!-- <section id="gallery" class="bg-white rounded-3xl shadow-xl p-8 md:p-16 mb-12 transform transition duration-500 hover:scale-[1.01]">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">Our Happy Moments</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/400x300/AEC6CF/FFFFFF?text=Art+Class" alt="Kids doing art" class="w-full h-48 object-cover transform hover:scale-110 transition duration-300">
+                    <p class="p-4 text-gray-700 text-center font-medium">Creative Art Time</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/400x300/FFB3BA/333333?text=Outdoor+Play" alt="Kids playing outdoors" class="w-full h-48 object-cover transform hover:scale-110 transition duration-300">
+                    <p class="p-4 text-gray-700 text-center font-medium">Outdoor Adventures</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/400x300/BADA55/FFFFFF?text=Story+Time" alt="Teacher reading to kids" class="w-full h-48 object-cover transform hover:scale-110 transition duration-300">
+                    <p class="p-4 text-gray-700 text-center font-medium">Engaging Story Time</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/400x300/CDB4DB/FFFFFF?text=Music+Fun" alt="Kids playing music" class="w-full h-48 object-cover transform hover:scale-110 transition duration-300">
+                    <p class="p-4 text-gray-700 text-center font-medium">Music and Movement</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/400x300/FFC8DD/333333?text=Building+Blocks" alt="Kids with building blocks" class="w-full h-48 object-cover transform hover:scale-110 transition duration-300">
+                    <p class="p-4 text-gray-700 text-center font-medium">Building & Discovery</p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="https://placehold.co/400x300/D4A5A5/FFFFFF?text=Science+Exploration" alt="Kids doing science experiment" class="w-full h-48 object-cover transform hover:scale-110 transition duration-300">
+                    <p class="p-4 text-gray-700 text-center font-medium">Little Scientists</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Testimonials Section -->
+        <!-- <section id="testimonials" class="bg-white rounded-3xl shadow-xl p-8 md:p-16 mb-12 transform transition duration-500 hover:scale-[1.01]">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">What Parents Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-purple-50 p-6 rounded-2xl shadow-md border border-purple-200">
+                    <p class="text-lg italic text-gray-800 mb-4">
+                        "Trinity KID'S has been an absolute blessing for our child. The teachers are incredibly caring and the learning environment is just perfect. Our child comes home happy and excited every day!"
+                    </p>
+                    <p class="font-semibold text-purple-700">- Sarah L., Parent</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-md border border-blue-200">
+                    <p class="text-lg italic text-gray-800 mb-4">
+                        "We've seen such a remarkable improvement in our child's confidence and social skills since joining Trinity KID'S. The play-based learning approach is truly effective."
+                    </p>
+                    <p class="font-semibold text-blue-700">- David K., Parent</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Us Section -->
+        <section id="contact"
+            class="bg-green-100 rounded-3xl shadow-xl p-8 md:p-16 transform transition duration-500 hover:scale-[1.01]">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-10">Get in Touch</h2>
+            <!-- <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200" placeholder="your.email@example.com" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div> -->
+            <div class="md:w-1/2 text-gray-700">
+                <h3 class="text-2xl font-semibold text-indigo-800 mb-4">Our Details</h3>
+                <p class="mb-2"><strong class="text-indigo-600">Address:</strong> No.84/49, Doddamane kuteera, Opp Shri
+                    Anjaneyaswamy Temple, Doddanagamangala, Electronic city Post, Bangalore 560100</p>
+                <p class="mb-2">
+                    <strong class="text-indigo-600">Phone:</strong>
+                    <a href="tel:+918073872624" class="hover:underline">+91 8073872624</a> /
+                    <a href="tel:+918050760424" class="hover:underline">+91 8050760424</a>
+                </p>
+                <p class="mb-4">
+                    <strong class="text-indigo-600">Email:</strong>
+                    <a href="mailto:trinitypreschoolheadoffice@gmail.com" class="hover:underline">
+                        trinitypreschoolheadoffice@gmail.com
+                    </a>
+                </p>
+                <div class="mt-6">
+                    <h3 class="text-2xl font-semibold text-indigo-800 mb-4">Find Us On Map</h3>
+                    <!-- Placeholder for Google Map embed -->
+                    <div class="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                        <iframe src="https://www.google.com/maps?q=12.862389,77.675000&hl=es;z=14&output=embed"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-800 text-white py-8 px-6 md:px-12 mt-12 rounded-t-xl">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="mb-4 md:mb-0">&copy; 2025 Trinity Pre School. All rights reserved.</p>
+            <!-- <div class="flex space-x-6">
+                <a href="#" class="text-white hover:text-indigo-300 transition duration-300">Facebook</a>
+                <a href="#" class="text-white hover:text-indigo-300 transition duration-300">Instagram</a>
+                <a href="#" class="text-white hover:text-indigo-300 transition duration-300">Twitter</a>
+            </div> -->
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        closeMobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when a link inside it is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMobileMenu);
+        });
+    </script>
+</body>
+
+</html>
